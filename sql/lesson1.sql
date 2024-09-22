@@ -1,0 +1,2 @@
+select *
+FROME table;

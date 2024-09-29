@@ -1,0 +1,11 @@
+DROP TABLE IF EXISTS hospital;
+
+CREATE TABLE IF NOT EXISTS hospital (
+    num SERIAL PRIMARY KEY,
+    city VARCHAR(5) NOT NULL,
+	facility VARCHAR(30) NOT NULL UNIQUE,
+	phone VARCHAR(15),
+	ext VARCHAR(7),
+	con VARCHAR(7),
+	address VARCHAR(50)
+    );

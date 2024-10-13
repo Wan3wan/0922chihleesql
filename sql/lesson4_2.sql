@@ -34,3 +34,37 @@ SELECT date AS 日期,
 	   stationtel AS 電話
 FROM station_in_out in_out JOIN stations s ON in_out.stacode = s.stationcode
 WHERE stationname = '基隆';
+
+SELECT * FROM public.payment
+ORDER BY payment_id ASC;
+
+SELECT customer_id,
+		SUM(amount) AS 加總,
+		AVG(amount) AS 平均數量,
+		COUNT(amount) AS 筆數,
+		MAX(amount) AS 最大,
+		MIN(amount) AS 最小
+FROM payment
+GROUP BY customer_id
+ORDER BY customer_id ASC;
+
+
+SELECT customer_id,
+		SUM(amount) AS 加總,
+		AVG(amount) AS 平均數量,
+		COUNT(amount) AS 筆數,
+		MAX(amount) AS 最大,
+		MIN(amount) AS 最小
+FROM payment
+GROUP BY customer_id
+ORDER BY COUNT(amount) ASC;
+
+SELECT customer_id,
+		SUM(amount) AS 加總,
+		AVG(amount) AS 平均數量,
+		COUNT(amount) AS 筆數,
+		MAX(amount) AS 最大,
+		MIN(amount) AS 最小
+FROM payment
+GROUP BY customer_id
+ORDER BY 筆數 ASC;

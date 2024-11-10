@@ -21,3 +21,21 @@ with st.sidebar:
     input_dict = dict(all_country)
     options = st.multiselect("請選擇",input_dict.values(),default='台灣',placeholder="請選擇市場",label_visibility='hidden')
     st.write(options)
+
+
+def user_select():
+    print('使用者選擇了')
+    print(st.session_state.stocks)
+
+st.title('世界大盤分析')
+with st.sidebar:
+    default_country = '台灣'
+    st.title('請選擇股票市場:')
+    input_dict = dict(all_country)
+    st.multiselect("請選擇",input_dict.values(),
+                    default=default_country,
+                    placeholder="請選擇市場",
+                    label_visibility='hidden',
+                    key='stock',
+                    on_change=user_select)
+st.write(default_country)

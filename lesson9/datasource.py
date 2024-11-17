@@ -1,5 +1,5 @@
 #常數
-PI=3.1415926
+PI = 3.1415926
 
 #自訂的class
 class CustomClass:

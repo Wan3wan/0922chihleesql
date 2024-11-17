@@ -1,6 +1,7 @@
 from dotenv import load_dotenv
 import streamlit as st
 from time import sleep
+from datasource import get_data
 
 load_dotenv()
 placeholder=st.empty()

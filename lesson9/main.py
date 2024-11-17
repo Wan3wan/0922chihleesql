@@ -1,7 +1,7 @@
 from dotenv import load_dotenv
 import streamlit as st
 from time import sleep
-from datasource import get_data
+from tools.datasource import get_data
 
 @st.dialog("目前發生問題,請稍後再試")
 def alert():
